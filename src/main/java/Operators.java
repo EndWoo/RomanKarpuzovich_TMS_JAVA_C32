@@ -41,7 +41,15 @@ public class Operators {
         int number1 = sc.nextInt();
         System.out.println("Enter your second number: ");
         int number2 = sc.nextInt();
-        return (float) (number1 + number2) / 2;
+        float sum = 0;
+        float counter = 0;
+        float res = 0;
+        for (int i = number1; i < number2; i++ ) {
+            sum = i + i++;
+            counter++;
+            res = sum/counter;
+        }
+        return res;
     }
 }
 
