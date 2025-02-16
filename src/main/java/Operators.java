@@ -6,12 +6,12 @@ public class Operators {
 
     }
 
-    Scanner sc = new Scanner(System.in);
 
 //1) Дано произвольное число. Необходимо узнать, сколько в конце числа нулей.
 
-    public int Task1() {
+    public int zeroCounting() {
         System.out.println("Enter your number: ");
+        Scanner sc = new Scanner(System.in);
         long number = sc.nextInt();
         int n = 10;
         int i = 0;
@@ -24,32 +24,32 @@ public class Operators {
 
 //    2) Необходимо найти интервал числа n (интервал это произведение всех целых чисел от 1 до n)
 
-    public int Task2() {
+    public int intervalCalculation() {
         System.out.println("Enter your number: ");
+        Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
         int res = 1;
-        for (int i = 1; i < number; i++) {
-            res = res * (i + 1);
+        for (int i = 1; i <= number; i++) {
+            res = res * i;
         }
         return res;
     }
 
 //    3) Пользователь вводит два числа. Необходимо найти среднее арифметическое между заданными числами (сумма чисел / количество чисел)
 
-    public float Task3() {
+    public float arithmeticMeanCalculation() {
         System.out.println("Enter your first number: ");
+        Scanner sc = new Scanner(System.in);
         int number1 = sc.nextInt();
         System.out.println("Enter your second number: ");
         int number2 = sc.nextInt();
-        float sum = 0;
-        float counter = 0;
-        float res = 0;
-        for (int i = number1; i < number2; i++ ) {
+        int sum = 0;
+        int counter = 0;
+        for (int i = number1; i < number2; i++) {
             sum = i + i++;
             counter++;
-            res = sum/counter;
         }
-        return res;
+        return (float) sum / counter;
     }
 }
 
