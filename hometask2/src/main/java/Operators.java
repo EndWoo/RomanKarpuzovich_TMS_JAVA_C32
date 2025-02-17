@@ -45,8 +45,8 @@ public class Operators {
         int number2 = sc.nextInt();
         int sum = 0;
         int counter = 0;
-        for (int i = number1; i < number2; i++) {
-            sum = i + i++;
+        for (int i = number1; i <= number2; i++) {
+            sum = sum + i;
             counter++;
         }
         return (float) sum / counter;
